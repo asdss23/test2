@@ -53,21 +53,22 @@ Effective preprocessing of medical images is critical for achieving high perform
     - **Z-Score Normalization**: Standardizes the pixel values by subtracting the mean and dividing by the standard deviation.
     - **Histogram Equalization**: Enhances the contrast of images by redistributing the intensity values.
 2. **Data Augmentation**: 
-![[Pasted image 20240526203008.png]]Data augmentation techniques artificially increase the size of the training dataset by creating modified versions of the original images. This helps improve the model's robustness and generalization by exposing it to a wider variety of image variations. Common augmentation techniques include:
+![Pasted image 20240526202948](https://github.com/asdss23/test2/assets/78685255/06709cf5-3e92-4665-a7cd-6c31578e6480)
+Data augmentation techniques artificially increase the size of the training dataset by creating modified versions of the original images. This helps improve the model's robustness and generalization by exposing it to a wider variety of image variations. Common augmentation techniques include:
     
     - **Rotation**: Rotating images by a random angle.
     - **Scaling**: Resizing images randomly within a certain range.
     - **Flipping**: Horizontally or vertically flipping images.
     - **Cropping**: Randomly cropping sections of images.
     - **Translation**: Shifting images horizontally or vertically.
-3. **Resizing**: Medical images come in various sizes and resolutions, and resizing them to a consistent size is necessary for batch processing in machine learning models. Resizing ensures that all images in the dataset have the same dimensions, which is required for feeding them into neural networks.
+4. **Resizing**: Medical images come in various sizes and resolutions, and resizing them to a consistent size is necessary for batch processing in machine learning models. Resizing ensures that all images in the dataset have the same dimensions, which is required for feeding them into neural networks.
     
-4. **Color Adjustment**: Medical images may be grayscale or in color, depending on the imaging modality (e.g., X-ray, MRI, or histopathology). Color adjustments might include:
+5. **Color Adjustment**: Medical images may be grayscale or in color, depending on the imaging modality (e.g., X-ray, MRI, or histopathology). Color adjustments might include:
     
     - **Grayscale Conversion**: Converting color images to grayscale if the color information is not relevant for the analysis.
     - **Color Normalization**: Adjusting the color channels to a consistent range, which is particularly useful in histopathology where color staining variations can affect model performance.
     - **Channel Standardization**: Standardizing the mean and standard deviation of each color channel independently.
-5. **Noise Reduction**: Applying filters to reduce noise and artifacts in the images. Common noise reduction techniques include:
+6. **Noise Reduction**: Applying filters to reduce noise and artifacts in the images. Common noise reduction techniques include:
     
     - **Gaussian Blur**: Reduces high-frequency noise by averaging the pixel values in a Gaussian-weighted manner.
     - **Median Filter**: Replaces each pixel value with the median value of the neighboring pixels, effective for salt-and-pepper noise.
